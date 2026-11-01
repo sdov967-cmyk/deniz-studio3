@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="az" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deniz Studio | Rəqəmsal Xidmətlər və AI Həllər</title>
+    <meta name="description" content="Foto/video redaktə, süni intellekt xidmətləri, dizayn və premium rəqəmsal hesabların satışı.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        creamBg: '#fbf9f5',
+                        cardBg: '#ffffff',
+                        gold: {
+                            DEFAULT: '#c5a059',
+                            dark: '#a8833d',
+                            light: '#fdf8f0'
+                        },
+                        charcoal: '#1a1a1a'
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fbf9f5; color: #1a1a1a; }
+        .glass-nav {
+            background: rgba(251, 249, 245, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .text-gold { color: #c5a059; }
+        .bg-gold { background-color: #c5a059; }
+        .border-gold { border-color: #c5a059; }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-white">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Loqo -->
+            <a href="https://www.instagram.com/foto_video_montaj1?cplk=MTI5dmM4bmludGhxbg%3D%3D&utm_source=qr" target="_blank" class="flex items-center gap-2.5 text-2xl font-extrabold tracking-tight text-charcoal group">
+                <span class="w-10 h-10 rounded-xl bg-gold flex items-center text-white justify-center shadow-md shadow-gold/20 font-bold group-hover:scale-105 transition">
+                    <i class="fa-solid fa-water"></i>
+                </span>
+                Deniz<span class="text-gold">Studio</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-stone-600">
+                <a href="#services" class="hover:text-gold transition">Xidmətlər</a>
+                <a href="#portfolio" class="hover:text-gold transition">Nümunələr</a>
+                <a href="#premium" class="hover:text-gold transition">Premium Hesablar</a>
+                <a href="#process" class="hover:text-gold transition">Proses</a>
+                <a href="#contact" class="hover:text-gold transition">Əlaqə</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="bg-charcoal hover:bg-gold text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 shadow-sm">
+                    Sifariş ver
+                </a>
+            </div>
+
+            <button id="menuBtn" class="md:hidden text-2xl text-charcoal focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#services" class="block text-stone-700 font-medium py-1">Xidmətlər</a>
+            <a href="#portfolio" class="block text-stone-700 font-medium py-1">Nümunələr</a>
+            <a href="#premium" class="block text-stone-700 font-medium py-1">Premium Hesablar</a>
+            <a href="#contact" class="block bg-gold text-center text-white py-2.5 rounded-xl font-bold mt-2">Sifariş ver</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest">
+                    <i class="fa-solid fa-sparkles"></i> Minimalist & Lüks Rəqəmsal Agentlik
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-charcoal">
+                    Xatirələrinizi canlandırırıq, <span class="text-gold">brendinizi zərifləşdiririk</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto font-medium">
+                    Süni intellekt həlləri, qüsursuz video montaj, təmiz dizaynlar və eksklüziv rəqəmsal hesablar.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#contact" class="w-full sm:w-auto bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded-2xl font-extrabold text-base transition-all duration-300 shadow-lg shadow-gold/20 flex items-center justify-center gap-2">
+                        <span>Layihəyə Başla</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#portfolio" class="w-full sm:w-auto bg-stone-200/70 hover:bg-stone-200 text-charcoal px-8 py-4 rounded-2xl font-bold text-base transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>Nümunələrə Bax</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- XİDMƏTLƏR -->
+    <section id="services" class="py-24 bg-white/60 border-y border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">Xidmət Sahələrimiz</h2>
+                <p class="text-stone-600">Sizin üçün ən yüksək estetik standartlarda hazırladığımız xidmətlər.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kart 1 -->
+                <div class="bg-cardBg border border-stone-200/80 rounded-3xl p-8 hover:border-gold/50 transition-all duration-300 group flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-all">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-charcoal">Süni İntellekt (AI) Həllər</h3>
+                        <p class="text-stone-600 text-sm mb-6 leading-relaxed">
+                            Foto canlandırma, danışan fotolar, xatirə videoları və süni intellektlə realistik səhnələrin yaradılması.
+                        </p>
+                    </div>
+                    <button onclick="selectService('Süni İntellekt (AI)')" class="w-full bg-stone-50 hover:bg-gold hover:text-white text-stone-800 py-3 rounded-xl font-bold text-sm transition-all border border-stone-200">
+                        Sifariş et
+                    </button>
+                </div>
+
+                <!-- Kart 2 -->
+                <div class="bg-cardBg border border-stone-200/80 rounded-3xl p-8 hover:border-gold/50 transition-all duration-300 group flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-all">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-charcoal">Video Prodakşn & Reels</h3>
+                        <p class="text-stone-600 text-sm mb-6 leading-relaxed">
+                            Peşəkar montaj, xüsusi effektlər, TikTok və Reels kontentləri, YouTube intro/outro hazırlığı.
+                        </p>
+                    </div>
+                    <button onclick="selectService('Video Prodakşn')" class="w-full bg-stone-50 hover:bg-gold hover:text-white text-stone-800 py-3 rounded-xl font-bold text-sm transition-all border border-stone-200">
+                        Sifariş et
+                    </button>
+                </div>
+
+                <!-- Kart 3 -->
+                <div class="bg-cardBg border border-stone-200/80 rounded-3xl p-8 hover:border-gold/50 transition-all duration-300 group flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-all">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-charcoal">Foto Bərpa və Redaktə</h3>
+                        <p class="text-stone-600 text-sm mb-6 leading-relaxed">
+                            Köhnə və solğun şəkillərin bərpası, rəngləndirilməsi, HD/4K keyfiyyət artırılması və fon dəyişimi.
+                        </p>
+                    </div>
+                    <button onclick="selectService('Foto və Bərpa')" class="w-full bg-stone-50 hover:bg-gold hover:text-white text-stone-800 py-3 rounded-xl font-bold text-sm transition-all border border-stone-200">
+                        Sifariş et
+                    </button>
+                </div>
+
+                <!-- Kart 4 -->
+                <div class="bg-cardBg border border-stone-200/80 rounded-3xl p-8 hover:border-gold/50 transition-all duration-300 group flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-all">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-charcoal">Biznes və Reklam Çarxları</h3>
+                        <p class="text-stone-600 text-sm mb-6 leading-relaxed">
+                            Şirkət tanıtımları, məhsul reklamları, restoran və obyektlər üçün xüsusi cəlbedici videoçarxlar.
+                        </p>
+                    </div>
+                    <button onclick="selectService('Reklam və Biznes')" class="w-full bg-stone-50 hover:bg-gold hover:text-white text-stone-800 py-3 rounded-xl font-bold text-sm transition-all border border-stone-200">
+                        Sifariş et
+                    </button>
+                </div>
+
+                <!-- Kart 5 -->
+                <div class="bg-cardBg border border-stone-200/80 rounded-3xl p-8 hover:border-gold/50 transition-all duration-300 group flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-all">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-charcoal">Dizayn və Brendinq</h3>
+                        <p class="text-stone-600 text-sm mb-6 leading-relaxed">
+                            Logo dizaynı, banner, vizit kartları, sosial media post/story vizualları və səhifə tərtibatı.
+                        </p>
+                    </div>
+                    <button onclick="selectService('Dizayn və Brend')" class="w-full bg-stone-50 hover:bg-gold hover:text-white text-stone-800 py-3 rounded-xl font-bold text-sm transition-all border border-stone-200">
+                        Sifariş et
+                    </button>
+                </div>
+
+                <!-- Kart 6 -->
+                <div class="bg-cardBg border border-stone-200/80 rounded-3xl p-8 hover:border-gold/50 transition-all duration-300 group flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-gold group-hover:text-white transition-all">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-charcoal">Xüsusi Günlər</h3>
+                        <p class="text-stone-600 text-sm mb-6 leading-relaxed">
+                            Toy, ad günü, nişan və yubileylər üçün yaddaqalan emosional təbrik videoları və slaydşoular.
+                        </p>
+                    </div>
+                    <button onclick="selectService('Xüsusi Günlər')" class="w-full bg-stone-50 hover:bg-gold hover:text-white text-stone-800 py-3 rounded-xl font-bold text-sm transition-all border border-stone-200">
+                        Sifariş et
+                    </button>
+                </div>
+            </div>
+
+            <!-- Qeyd -->
+            <div class="mt-12 bg-cardBg border border-gold/30 rounded-2xl p-6 text-center max-w-3xl mx-auto shadow-sm">
+                <p class="text-stone-700 font-medium text-sm">
+                    <i class="fa-solid fa-circle-info text-gold mr-2"></i> Müştərilərin istəklərinə uyğun fərdi və xüsusi sifarişlər də qəbul olunur.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO & REAL YOUTUBE SHORTS VİDEO NÜMUNƏSİ -->
+    <section id="portfolio" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-photo-film"></i> Canlı Nümunələr
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">Xatirə Canlandırma Nümunəsi</h2>
+                <p class="text-stone-600">Göndərdiyiniz real video nümunə ilə iş keyfiyyətimizə baxın.</p>
+            </div>
+
+            <!-- YouTube Shorts Pleyer Bloku -->
+            <div class="max-w-md mx-auto mb-16 bg-white rounded-3xl border border-stone-200 p-6 shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-base text-charcoal flex items-center gap-2">
+                        <i class="fa-solid fa-play text-gold"></i> AI Danışan Xatirə
+                    </h3>
+                    <span class="text-xs bg-gold/10 text-gold border border-gold/30 px-3 py-1 rounded-full font-bold">Canlı Önizləmə</span>
+                </div>
+                
+                <div class="relative w-full aspect-[9/16] rounded-2xl overflow-hidden bg-stone-900 shadow-inner">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/uYqlevJjgR0?autoplay=1&mute=1&loop=1&playlist=uYqlevJjgR0" title="Deniz Studio Nümunə" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="mt-4 text-center">
+                    <button onclick="selectService('Süni İntellekt (AI)')" class="w-full bg-gold hover:bg-gold-dark text-white py-3 rounded-xl font-bold text-sm transition shadow-md shadow-gold/20">
+                        Bu Xidməti Sifariş Et
+                    </button>
+                </div>
+            </div>
+
+            <!-- Əvvəl / Sonra Slider -->
+            <div class="max-w-3xl mx-auto mb-16 bg-white rounded-3xl border border-stone-200 p-6 shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-base text-charcoal flex items-center gap-2"><i class="fa-solid fa-sliders text-gold"></i> Foto Bərpa Nümunəsi</h3>
+                    <span class="text-xs bg-gold/10 text-gold border border-gold/30 px-3 py-1 rounded-full font-bold">Müqayisə et</span>
+                </div>
+                
+                <div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden select-none">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Sonra" class="absolute inset-0 w-full h-full object-cover">
+                    <div id="beforeImageWrapper" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-gold">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Əvvəl" class="absolute inset-0 w-full h-full object-cover grayscale contrast-125 brightness-75 max-w-none" style="width: 100%; height: 100%;">
+                    </div>
+                    <input type="range" id="sliderRange" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20">
+                    <div id="sliderHandle" class="absolute top-0 bottom-0 left-1/2 w-1 bg-gold pointer-events-none z-10 flex items-center justify-center">
+                        <div class="w-8 h-8 rounded-full bg-gold text-white shadow-lg flex items-center justify-center text-xs font-bold">
+                            <i class="fa-solid fa-arrows-left-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM HESABLAR -->
+    <section id="premium" class="py-24 bg-white/60 border-t border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-crown"></i> Rəsmi və Zəmanətli
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">Premium Hesablar</h2>
+                <p class="text-stone-600">Geniş seçim və sərfəli təkliflər.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Hesab 1 -->
+                <div class="bg-white border border-stone-200 rounded-3xl p-6 flex flex-col justify-between hover:border-gold/50 transition shadow-sm">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 text-gold flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-charcoal">CapCut Pro</h3>
+                        <p class="text-stone-600 text-xs mb-6 leading-relaxed">Bütün Pro effektlər, şablonlar və AI alətlər açıq şəkildə hesabınızda.</p>
+                    </div>
+                    <div>
+                        <div class="text-xs text-stone-500 mb-3 font-semibold">Qiymət üçün yazın</div>
+                        <a href="https://wa.me/994773619334?text=Salam,%20CapCut%20Pro%20hesabı%20barədə%20məlumat." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp ilə al
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hesab 2 -->
+                <div class="bg-white border border-stone-200 rounded-3xl p-6 flex flex-col justify-between hover:border-gold/50 transition shadow-sm">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 text-gold flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-charcoal">Google Gemini Advanced</h3>
+                        <p class="text-stone-600 text-xs mb-6 leading-relaxed">Ən güclü süni intellekt modeli ilə qabaqcıl imkanlar.</p>
+                    </div>
+                    <div>
+                        <div class="text-xs text-stone-500 mb-3 font-semibold">Qiymət üçün yazın</div>
+                        <a href="https://wa.me/994773619334?text=Salam,%20Gemini%20Advanced%20hesabı%20barədə." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp ilə al
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hesab 3 -->
+                <div class="bg-white border border-stone-200 rounded-3xl p-6 flex flex-col justify-between hover:border-gold/50 transition shadow-sm">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 text-gold flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-charcoal">ChatGPT Plus / Pro</h3>
+                        <p class="text-stone-600 text-xs mb-6 leading-relaxed">GPT-4o, səsli rejim, şəkil generasiyası.</p>
+                    </div>
+                    <div>
+                        <div class="text-xs text-stone-500 mb-3 font-semibold">Qiymət üçün yazın</div>
+                        <a href="https://wa.me/994773619334?text=Salam,%20ChatGPT%20Plus%20hesabı%20barədə." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp ilə al
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hesab 4 -->
+                <div class="bg-white border border-stone-200 rounded-3xl p-6 flex flex-col justify-between hover:border-gold/50 transition shadow-sm">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 text-gold flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-charcoal">Digər Platformalar</h3>
+                        <p class="text-stone-600 text-xs mb-6 leading-relaxed">Jetons və digər tələb olunan rəqəmsal xidmət hesabları.</p>
+                    </div>
+                    <div>
+                        <div class="text-xs text-stone-500 mb-3 font-semibold">Fərdi sorğu</div>
+                        <a href="https://wa.me/994773619334?text=Salam,%20digər%20hesablar%20barədə." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp ilə al
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NECƏ İŞLƏYİRİK -->
+    <section id="process" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">Necə İşləyirik?</h2>
+                <p class="text-stone-600">4 sadə addımda layihənizi təhvil alın.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-stone-200 rounded-3xl p-8 text-center space-y-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gold text-white font-bold text-lg flex items-center justify-center mx-auto shadow-md shadow-gold/20">1</div>
+                    <h3 class="font-bold text-lg text-charcoal">Sifariş</h3>
+                    <p class="text-stone-600 text-sm">Formu doldurun və ya WhatsApp-la yazın.</p>
+                </div>
+                <div class="bg-white border border-stone-200 rounded-3xl p-8 text-center space-y-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gold text-white font-bold text-lg flex items-center justify-center mx-auto shadow-md shadow-gold/20">2</div>
+                    <h3 class="font-bold text-lg text-charcoal">Razılaşma</h3>
+                    <p class="text-stone-600 text-sm">Detalları müzakirə edib qiyməti təsdiqləyirik.</p>
+                </div>
+                <div class="bg-white border border-stone-200 rounded-3xl p-8 text-center space-y-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gold text-white font-bold text-lg flex items-center justify-center mx-auto shadow-md shadow-gold/20">3</div>
+                    <h3 class="font-bold text-lg text-charcoal">Hazırlıq</h3>
+                    <p class="text-stone-600 text-sm">Peşəkar komandamız işinizi icra edir.</p>
+                </div>
+                <div class="bg-white border border-stone-200 rounded-3xl p-8 text-center space-y-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-gold text-white font-bold text-lg flex items-center justify-center mx-auto shadow-md shadow-gold/20">4</div>
+                    <h3 class="font-bold text-lg text-charcoal">Təhvil</h3>
+                    <p class="text-stone-600 text-sm">Hazır məhsulu yüksək keyfiyyətdə təqdim edirik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ƏLAQƏ VƏ FORM -->
+    <section id="contact" class="py-24 bg-white/60 border-t border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-headset"></i> Əlaqə
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal">Layihənizi reallaşdıraq</h2>
+                    <p class="text-stone-600">Sifariş vermək və ya suallarınızı vermək üçün bizə yazın.</p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <a href="https://wa.me/994773619334" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-stone-200 hover:border-gold transition group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center text-lg group-hover:bg-gold group-hover:text-white transition">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-stone-500 font-medium">Telefon / WhatsApp</div>
+                                <div class="font-bold text-charcoal">+994 77 361 93 34</div>
+                            </div>
+                        </a>
+                        <a href="mailto:esedovxan@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-stone-200 hover:border-gold transition group shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center text-lg group-hover:bg-gold group-hover:text-white transition">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-stone-500 font-medium">E-poçt</div>
+                                <div class="font-bold text-charcoal">esedovxan@gmail.com</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Sosial şəbəkələr və e-poçtunuz -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.instagram.com/foto_video_montaj1?cplk=MTI5dmM4bmludGhxbg%3D%3D&utm_source=qr" target="_blank" class="w-12 h-12 rounded-2xl bg-white border border-stone-200 hover:bg-gold hover:text-white text-stone-700 flex items-center justify-center transition text-lg shadow-sm"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@foto.video.montajj?_r=1&_t=ZS-9B1Wg6gQVvw" target="_blank" class="w-12 h-12 rounded-2xl bg-white border border-stone-200 hover:bg-gold hover:text-white text-stone-700 flex items-center justify-center transition text-lg shadow-sm"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/994773619334" target="_blank" class="w-12 h-12 rounded-2xl bg-white border border-stone-200 hover:bg-gold hover:text-white text-stone-700 flex items-center justify-center transition text-lg shadow-sm"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:esedovxan@gmail.com" class="w-12 h-12 rounded-2xl bg-white border border-stone-200 hover:bg-gold hover:text-white text-stone-700 flex items-center justify-center transition text-lg shadow-sm"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-xl">
+                    <form id="orderForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-600 uppercase mb-1">Adınız</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:border-gold text-sm text-charcoal transition" placeholder="Ad və soyadınız">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-600 uppercase mb-1">Telefon / WhatsApp</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:border-gold text-sm text-charcoal transition" placeholder="+994 77 361 93 34">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-600 uppercase mb-1">Xidmət Seçimi</label>
+                            <select id="serviceSelect" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:border-gold text-sm text-charcoal transition">
+                                <option value="Süni İntellekt (AI)">Süni İntellekt (AI)</option>
+                                <option value="Video Prodakşn">Video Prodakşn</option>
+                                <option value="Foto və Bərpa">Foto və Bərpa</option>
+                                <option value="Reklam və Biznes">Reklam və Biznes</option>
+                                <option value="Dizayn və Brend">Dizayn və Brend</option>
+                                <option value="Xüsusi Günlər">Xüsusi Günlər</option>
+                                <option value="Premium Hesablar">Premium Hesablar</option>
+                                <option value="Fərdi Sifariş">Fərdi Sifariş</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-600 uppercase mb-1">Mesajınız</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:outline-none focus:border-gold text-sm text-charcoal transition" placeholder="İstəklərinizi ətraflı yazın..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gold hover:bg-gold-dark text-white py-4 rounded-xl font-bold text-sm transition shadow-lg shadow-gold/20">
+                            Sifarişi Göndər
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-white py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2 text-xl font-extrabold">
+                <span class="w-8 h-8 rounded-lg bg-gold flex items-center text-white justify-center text-sm font-bold">
+                    <i class="fa-solid fa-water"></i>
+                </span>
+                Deniz<span class="text-gold">Studio</span>
+            </div>
+            <p class="text-stone-400 text-xs text-center">
+                &copy; 2026 Deniz Studio. Bütün hüquqlar qorunur. Minimalist rəqəmsal studiya.
+            </p>
+            <div class="flex items-center gap-4 text-stone-400 text-sm">
+                <a href="#services" class="hover:text-gold transition">Xidmətlər</a>
+                <a href="#portfolio" class="hover:text-gold transition">Nümunələr</a>
+                <a href="#contact" class="hover:text-gold transition">Əlaqə</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function selectService(serviceName) {
+            const selectEl = document.getElementById('serviceSelect');
+            for(let i=0; i<selectEl.options.length; i++) {
+                if(selectEl.options[i].value === serviceName) {
+                    selectEl.selectedIndex = i;
+                    break;
+                }
+            }
+            window.location.href = '#contact';
+        }
+
+        const sliderRange = document.getElementById('sliderRange');
+        const beforeWrapper = document.getElementById('beforeImageWrapper');
+        const sliderHandle = document.getElementById('sliderHandle');
+
+        sliderRange.addEventListener('input', (e) => {
+            const val = e.target.value;
+            beforeWrapper.style.width = val + '%';
+            sliderHandle.style.left = val + '%';
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Sifarişiniz uğurla qəbul olundu! Tezliklə sizinlə əlaqə saxlanılacaq.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
